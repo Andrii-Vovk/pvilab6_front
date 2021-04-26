@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.css';
+import Board from './Board.js'
+import Timer from './Timer';
+import BarChart from './BarChart';
+import Form from './Form';
+import Avatar from "./Avatar";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <header> Лабораторна робота 4 </header>
+      <Timer />
+      <div className="chessboard">
+        <Board />
+      </div>
+      <div className="formContainer">
+        <Form />
+      </div>
+      <div className='BarChart'>
+        <BarChart />
+      </div>
     </div>
   );
 }
